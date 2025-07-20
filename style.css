@@ -38,6 +38,33 @@ input::placeholder{
     font-family: 'Courier New', Courier, monospace;
 }
 
+.input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+#search-input {
+  width: 100%;
+  padding: 10px 35px 10px 10px; 
+  border: 1px solid var(--secondary-color);
+  border-radius: 8px;
+  outline: none;
+  font-size: .9rem;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
+}
+
+#clear-btn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #888;
+  font-size: 16px;
+  display: none; 
+}
+
 .container h1{
     text-align: center;
 }
@@ -80,14 +107,43 @@ border-radius: 3px;
     margin-top: 8px;
 }
 
-.results-display {
+.results-display, .results-content {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.explanation-text{
+.explanation-text, .error-message{
     text-align: center;
     color: var(--text-color);
     font-size: 0.8rem;
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.loading-message {
+  font-size: 0.95rem;
+  color: var(--secondary-color);
+  text-align: center;
+  margin-top: 10px;
+  animation: blink 1.2s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
 }
