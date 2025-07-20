@@ -1,10 +1,10 @@
 let searchInput = document.getElementById("search-input");
 let resultsDisplay = document.querySelector(".results-display");
-const clearBtn = document.getElementById('clear-btn');
+const clearBtn = document.getElementById("clear-btn");
 
 searchInput.addEventListener("input", () => {
   const trimmedValue = searchInput.value.trim();
-  clearBtn.style.display = trimmedValue ? 'block' : 'none';
+  clearBtn.style.display = trimmedValue ? "block" : "none";
 
   if (trimmedValue === "") {
     resultsDisplay.innerHTML = `
@@ -26,7 +26,7 @@ searchInput.addEventListener("keypress", (event) => {
 clearBtn.addEventListener("click", () => {
   searchInput.value = "";
   clearBtn.style.display = "none";
-     resultsDisplay.innerHTML = `
+  resultsDisplay.innerHTML = `
      <p class="explanation-text">
             Type a word and press enter to get meaning,example,synonyms and
             antonyms of that typed word.
@@ -38,7 +38,7 @@ clearBtn.addEventListener("click", () => {
 let fetchData = async () => {
   try {
     let searchValue = searchInput.value.toLowerCase();
-        resultsDisplay.innerHTML = `<p class="loading-message">Searching the meaning of "${searchValue}"</p>`;
+    resultsDisplay.innerHTML = `<p class="loading-message">Searching the meaning of "${searchValue}"</p>`;
 
     let res = await fetch(
       `https://api.dictionaryapi.dev/api/v2/entries/en/${searchValue}`
