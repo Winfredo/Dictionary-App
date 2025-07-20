@@ -79,3 +79,15 @@ border-radius: 3px;
     font-size: 0.9rem;
     margin-top: 8px;
 }
+
+.results-display {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.explanation-text{
+    text-align: center;
+    color: var(--text-color);
+    font-size: 0.8rem;
+}
