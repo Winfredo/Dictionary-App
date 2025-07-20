@@ -1,38 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <div class="main-content">
-            <h1>English Dictionary</h1>
-            <input type="text" id="search-input" placeholder="Search for a word..." />
-            <p>Happy</p>
+      <div class="main-content">
+        <h1>English Dictionary</h1>
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Search for a word"
+        />
 
-            <!-- Div for the meaning -->
-            <div>
-                <p>Meaning</p>
-                <p>Feeling or showing pleasure or contentment.</p>
-            </div>
-
-            <!-- Div for the example -->
-            <div>
-                <p>Example</p>
-                <p>She was happy to see her friends.</p>
-            </div>
-
-            <!-- Div for the synonyms -->
-             <div>
-                <p>Synonyms</p>
-                <p>Joyful, Elated, Content</p>
-             </div>
+        <div class="word-details">
+          <h3>Happy</h3>
+          <p>Adjective</p>
         </div>
+        <div class="divider"></div>
+
+        <!-- Div for the meaning -->
+        <div class="word-meaning">
+          <h4>Meaning</h4>
+          <p class="definition">Feeling or showing pleasure or contentment.</p>
+        </div>
+        <div class="divider"></div>
+
+
+        <!-- Div for the example -->
+        <div class="word-example">
+          <h4>Example</h4>
+          <p class="example">She was happy to see her friends.</p>
+        </div>
+        <div class="divider"></div>
+
+
+
+        <!-- Div for the synonyms -->
+        <div class="word-synonyms">
+          <h4>Synonyms</h4>
+          <p class="synonym">Joyful, Elated, Content</p>
+        </div>
+         <div class="divider"></div>
+
+        <div class="word-antonyms">
+          <h4>Antonyms</h4>
+          <p class="antonym">Sad, Unhappy, Depressed</p>
+        </div>
+         <div class="divider"></div>
+
+      </div>
     </div>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
